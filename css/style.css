@@ -5,7 +5,33 @@ h1 span { font-weight: 700; color: hsl(209, 33%, 12%);}
 h2 {font-weight: 300; color: hsl(209, 33%, 12%); font-size: 20px; line-height: 0.4;}
 .logo { margin-top: 80px; }
 .copyright { clear: both; font-size: 11px;}
-input { border-radius: 36px; padding: 14px 36px; font-family: "Libre Franklin", Arial, Helvetica, sans-serif; font-size: 14px; font-size: 14px; }
-input[type="text"] { border: 1px solid hsl(223, 100%, 88%); min-width: 320px; margin-right: 10px;}
-input[type="button"] { background-color: hsl(223, 87%, 63%); border: 1px solid hsl(223, 87%, 63%); color: white; 
-.subscription { margin-top: 40px;}
+input { border-radius: 36px; font-family: "Libre Franklin", Arial, Helvetica, sans-serif; font-size: 14px; font-size: 14px; }
+input[type="email"] { padding: 1.3em 1.4em; border: 1px solid hsl(223, 100%, 88%); min-width: 360px; margin-right: 10px; color: hsl(223, 100%, 88%);}
+input[type="email"]:focus {outline: 0;background: white;}
+input[type="email"]:invalid:not(:focus):not(:placeholder-shown) {outline: 0;border: 1px solid hsl(354, 100%, 66%);}
+input[type="submit"] { padding: 1.3em 4.8em; background-color: hsl(223, 87%, 63%); border: 1px solid hsl(223, 87%, 63%); color: white; cursor: pointer;}
+.subscription { margin-top: 40px; }
+#preview { margin: 4em 0; }
+.social-icon-wrap { text-align: center; margin: 0 auto; padding: 1.2em 0 1.3em;}
+.social-icon {display: inline-block; cursor: pointer; margin: 4px 4px; width: 28px; height: 28px;border-radius: 50%; text-align: center; position: relative; z-index: 1; color: hsl(223, 87%, 63%);padding: 4px;}
+.social-icon:hover { background-color: hsl(223, 87%, 63%); color: white;}
+form { max-width: 640px;
+  margin: 0 auto;}
+form > div {
+  position: relative;
+}
+input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+form > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
+  max-height: 50%;
+  margin: 0 auto;
+}
+
+form > div .requirements {
+  padding: 2%;
+  max-height: 0;
+  transition: 0.28s;
+  overflow: hidden;
+  color:hsl(354, 100%, 66%);
+  font-style: italic;
+  font-size: 12px;
+}
